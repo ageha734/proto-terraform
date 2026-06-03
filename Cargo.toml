@@ -1,0 +1,30 @@
+[package]
+name = "proto_terraform"
+version = "0.1.0"
+edition = "2024"
+description = "Terraform WASM plugin for proto."
+authors = ["ageha734"]
+license = "MIT"
+repository = "https://github.com/ageha734/proto-terraform"
+publish = false
+
+[lib]
+crate-type = ["cdylib"]
+
+[dependencies]
+extism-pdk = "1.4.1"
+proto_pdk = "0.32.8"
+serde = { version = "1.0.219", features = ["derive"] }
+serde_json = "1.0.140"
+
+[dev-dependencies]
+proto_pdk_test_utils = "0.44.1"
+starbase_sandbox = "0.10.7"
+tokio = { version = "1.51.1", features = ["full"] }
+
+[profile.release]
+codegen-units = 1
+debug = false
+lto = true
+opt-level = "s"
+panic = "abort"
