@@ -106,10 +106,17 @@ mod terraform_tool {
                 })
                 .await,
             DownloadPrebuiltOutput {
-                download_url: "https://releases.hashicorp.com/terraform/1.5.7/terraform_1.5.7_linux_amd64.zip".into(),
+                download_url:
+                    "https://releases.hashicorp.com/terraform/1.5.7/terraform_1.5.7_linux_amd64.zip"
+                        .into(),
                 download_name: Some("terraform_1.5.7_linux_amd64.zip".into()),
-                checksum_url: Some("https://releases.hashicorp.com/terraform/1.5.7/terraform_1.5.7_SHA256SUMS".into()),
-                checksum_public_key: Some("https://www.hashicorp.com/.well-known/pgp-key.txt".into()),
+                checksum_url: Some(
+                    "https://releases.hashicorp.com/terraform/1.5.7/terraform_1.5.7_SHA256SUMS"
+                        .into()
+                ),
+                checksum_public_key: Some(
+                    "https://www.hashicorp.com/.well-known/pgp-key.txt".into()
+                ),
                 ..Default::default()
             }
         );
@@ -135,10 +142,17 @@ mod terraform_tool {
                 })
                 .await,
             DownloadPrebuiltOutput {
-                download_url: "https://releases.hashicorp.com/terraform/1.5.7/terraform_1.5.7_linux_arm64.zip".into(),
+                download_url:
+                    "https://releases.hashicorp.com/terraform/1.5.7/terraform_1.5.7_linux_arm64.zip"
+                        .into(),
                 download_name: Some("terraform_1.5.7_linux_arm64.zip".into()),
-                checksum_url: Some("https://releases.hashicorp.com/terraform/1.5.7/terraform_1.5.7_SHA256SUMS".into()),
-                checksum_public_key: Some("https://www.hashicorp.com/.well-known/pgp-key.txt".into()),
+                checksum_url: Some(
+                    "https://releases.hashicorp.com/terraform/1.5.7/terraform_1.5.7_SHA256SUMS"
+                        .into()
+                ),
+                checksum_public_key: Some(
+                    "https://www.hashicorp.com/.well-known/pgp-key.txt".into()
+                ),
                 ..Default::default()
             }
         );

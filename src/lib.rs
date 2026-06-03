@@ -135,16 +135,12 @@ pub fn download_prebuilt(
     let checksum_filename = format!("terraform_{version}_SHA256SUMS");
 
     Ok(Json(DownloadPrebuiltOutput {
-        download_url: format!(
-            "https://releases.hashicorp.com/terraform/{version}/{filename}"
-        ),
+        download_url: format!("https://releases.hashicorp.com/terraform/{version}/{filename}"),
         download_name: Some(filename),
         checksum_url: Some(format!(
             "https://releases.hashicorp.com/terraform/{version}/{checksum_filename}"
         )),
-        checksum_public_key: Some(
-            "https://www.hashicorp.com/.well-known/pgp-key.txt".into(),
-        ),
+        checksum_public_key: Some("https://www.hashicorp.com/.well-known/pgp-key.txt".into()),
         ..DownloadPrebuiltOutput::default()
     }))
 }
